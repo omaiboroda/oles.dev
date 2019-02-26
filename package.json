@@ -1,0 +1,54 @@
+{
+  "name": "maiboroda.me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "lint": "eslint ./**/*.tsx --fix",
+    "build": "next build",
+    "export": "next export",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-mdx": "^1.2.0",
+    "@zeit/next-typescript": "^1.1.1",
+    "express": "^4.16.4",
+    "fontfaceobserver": "^2.1.0",
+    "next": "^8.0.4-canary.2",
+    "next-images": "^1.0.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-icons": "^3.4.0",
+    "styled-components": "^4.1.3",
+    "styled-system": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-styled-components": "^1.10.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.3",
+    "prettier": "^1.16.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts(x?)": [
+      "npm run lint",
+      "git add"
+    ]
+  }
+}

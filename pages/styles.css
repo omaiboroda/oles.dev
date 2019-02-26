@@ -1,0 +1,19 @@
+body,
+html,
+input {
+  color: #444444;
+  font-family: Merriweather;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
