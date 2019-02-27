@@ -6,7 +6,7 @@ import Container from '../components/Container';
 import Fonts from '../components/Fonts';
 import Background from '../components/Background';
 import ArticlesList from '../components/ArticlesList';
-import Layout from '../components/Layout';
+import { Flex } from '../components/system';
 import './styles.css';
 
 const theme = {
@@ -43,10 +43,10 @@ class Index extends React.Component {
       <Background>
         <Container>
           <Header />
-          <Layout>
+          <Flex flexDirection={['column', 'column', 'column', 'row']}>
             <Profile />
             <ArticlesList />
-          </Layout>
+          </Flex>
         </Container>
       </Background>
     </ThemeProvider>

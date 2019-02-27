@@ -31,8 +31,8 @@ const Info = styled.ul`
 
 const ProfileContainer = styled.div`
   max-width: 250px;
-  padding: 0 20px;
   ${media.desktop`
+    margin-right: 40px;
     min-width: 250px;
   `}
 `;

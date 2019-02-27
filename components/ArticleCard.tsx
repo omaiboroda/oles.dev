@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { Flex } from './system';
+import { Flex, Box } from './system';
 import { H2 } from './Typography';
 import media from '../helpers/media';
 
@@ -13,6 +13,8 @@ const Thumbnail = styled.img`
   ${media.desktop`
     width: 160px;
     height: 160px;
+    min-width: 160px;
+    min-height: 160px;
   `}
 `;
 
@@ -25,18 +27,32 @@ interface Article {
   url: string;
 }
 
+const UnstyledLink = styled.a`
+  text-decoration: none;
+`;
+
+const PostLink = ({ article, children, ...props }) => (
+  <Link as={`/article/${article.slug}`} {...props}>
+    {children}
+  </Link>
+);
+
 const ArticleCard = ({ article }: Article) => {
   return (
-    <div>
-      <Flex>
-        <Thumbnail src={article.thumbnailUrl} />
-        <div>
-          <H2 m={0}>{article.title}</H2>
-          <p>{article.abstract}</p>
-          <Link as={`/article/${article.slug}`}>Read more</Link>
-        </div>
-      </Flex>
-    </div>
+    <Flex mb={4}>
+      <PostLink article={article} passHref>
+        <a><Thumbnail src={article.thumbnailUrl} /></a>
+      </PostLink>
+      <div>
+        <PostLink article={article} passHref>
+          <UnstyledLink>
+            <H2 m={0}>{article.title}</H2>
+          </UnstyledLink>
+        </PostLink>
+        <p>{article.abstract}</p>
+        <PostLink article={article}>Read more</PostLink>
+      </div>
+    </Flex>
   );
 };
 
