@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import Head from 'next/head';
 import Header from '../components/Header';
 import Profile from '../components/Profile';
 import Container from '../components/Container';
@@ -39,17 +40,23 @@ class Index extends React.Component {
   }
 
   render = () => (
-    <ThemeProvider theme={theme}>
-      <Background>
-        <Container>
-          <Header />
-          <Flex flexDirection={['column', 'column', 'column', 'row']}>
-            <Profile />
-            <ArticlesList />
-          </Flex>
-        </Container>
-      </Background>
-    </ThemeProvider>
+    <div>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <Background>
+          <Container>
+            <Header />
+            <Flex flexDirection={['column', 'column', 'column', 'row']}>
+              <Profile />
+              <ArticlesList />
+            </Flex>
+          </Container>
+        </Background>
+      </ThemeProvider>
+    </div>
   );
 }
 

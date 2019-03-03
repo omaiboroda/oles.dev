@@ -4,50 +4,68 @@ import { GoLocation, GoPerson } from 'react-icons/go';
 import media from '../helpers/media';
 import { Flex } from './system';
 
+const ProfileContainer = styled.div`
+  margin: 10px 0;
+  ${media.desktop`
+    max-width: 250px;
+    margin-right: 40px;
+    min-width: 250px;
+  `}
+`;
+
 const Avatar = styled.img`
   width: 70px;
   height: 70px;
   border-radius: 50%;
   filter: grayscale();
-  margin: 0 auto 20px;
   ${media.desktop`
+    margin: 0 auto 20px;
     width: 140px;
     height: 140px;
   `}
 `;
 
 const Info = styled.ul`
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 10px;
+  justify-content: center;
   ${media.desktop`
     margin: 0;
   `}
-
   li {
-    margin: 8px 0;
+    margin: 5px 0;
   }
-`;
-
-const ProfileContainer = styled.div`
-  max-width: 250px;
-  ${media.desktop`
-    margin-right: 40px;
-    min-width: 250px;
-  `}
 `;
 
 const Links = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0 auto;
+  display: flex;
+  ${media.desktop`
+    flex-direction: column;
+  `}
+
+  li:not(:first-child)::before {
+    content: '•';
+    margin: 0 10px;
+
+    ${media.desktop`
+      display: none;
+  `}
+  }
 `;
 
 const Profile = () => {
   return (
     <ProfileContainer theme="party" className="ProfileContainer">
-      <Flex justifyContent="space-between" flexDirection={['row', 'row', 'column']}>
-        <Avatar src="/static/avatar.jpeg" />
+      <Flex justifyContent="space-betcween" flexDirection={['row', 'row', 'column']}>
+        <div>
+          <Avatar src="/static/avatar.jpeg" />
+        </div>
         <Info>
           <li>
             <GoPerson />
