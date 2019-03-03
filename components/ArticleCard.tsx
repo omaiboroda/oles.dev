@@ -10,7 +10,9 @@ const Thumbnail = styled.img`
   height: 50px;
   filter: grayscale();
   margin-right: 20px;
-  ${media.desktop`
+  display: none;
+  ${media.tablet`
+    display: block;
     width: 160px;
     height: 160px;
     min-width: 160px;
@@ -41,7 +43,9 @@ const ArticleCard = ({ article }: Article) => {
   return (
     <Flex mb={4}>
       <PostLink article={article} passHref>
-        <a><Thumbnail src={article.thumbnailUrl} /></a>
+        <a>
+          <Thumbnail src={article.thumbnailUrl} />
+        </a>
       </PostLink>
       <div>
         <PostLink article={article} passHref>

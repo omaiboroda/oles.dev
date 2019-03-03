@@ -5,7 +5,7 @@ import media from '../helpers/media';
 import { Flex } from './system';
 
 const ProfileContainer = styled.div`
-  margin: 10px 0;
+  margin-bottom: 30px;
   ${media.desktop`
     max-width: 250px;
     margin-right: 40px;
