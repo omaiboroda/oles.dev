@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import media from '../helpers/media';
+import { Box } from './system';
 
-const Container = styled.div`
+const ContainerStyled = styled.div`
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
@@ -9,8 +10,15 @@ const Container = styled.div`
   background-color: rgba(255, 255, 255, 0.9);
   min-height: 100vh;
   ${media.desktop`
-    padding: 30px 40px;
+    padding: 0 40px;
   `}
 `;
+
+const Container = ({ children }) => (
+  <div>
+    <ContainerStyled>{children}</ContainerStyled>
+    <Box height={50} />
+  </div>
+);
 
 export default Container;

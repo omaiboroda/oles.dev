@@ -1,21 +1,27 @@
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
-import media from '../helpers/media';
-import { H1, H3 } from './Typography';
+import { Flex, Text } from './system';
+import { TransparentLink } from './Typography';
 
-const StyledHeader = styled.header`
-  text-align: center;
-  ${media.desktop`
-    margin-bottom: 40px;
-  `}
+const Logo = styled.div`
+  color: white;
+  background-color: ${props => props.theme.colors.greyDark};
+  border-radius: 2px;
+  padding: 8px 16px;
+  font-weight: bold;
+  letter-spacing: 0.6px;
 `;
 
 const Header = () => {
   return (
-    <StyledHeader>
-      <H1>Opinionated frontend</H1>
-      <H3>UX/DX</H3>
-    </StyledHeader>
+    <Flex height={60} alignItems="center">
+      <Link as="/" passHref>
+        <TransparentLink>
+          <Logo>oles.dev</Logo>
+        </TransparentLink>
+      </Link>
+    </Flex>
   );
 };
 

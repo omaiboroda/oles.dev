@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {
   space,
   width,
+  height,
   fontSize,
   color,
   fontWeight,
@@ -16,6 +17,7 @@ import {
 export const Box = styled.div`
   ${space}
   ${width}
+  ${height}
   ${fontSize}
   ${color}
 `;

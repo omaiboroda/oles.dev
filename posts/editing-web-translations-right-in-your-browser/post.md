@@ -1,10 +1,3 @@
----
-title: Editing web translations right in your browser
-published: false
-description: Give your translator more context
-tags: i18n, phraseapp, in-context-editor, translations
----
-
 Sometimes GIF replaces 1000 words:
 
 ![In-Context Editor](https://i.imgur.com/PPDZrBn.gif)

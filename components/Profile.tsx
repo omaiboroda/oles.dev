@@ -7,9 +7,9 @@ import { Flex } from './system';
 const ProfileContainer = styled.div`
   margin-bottom: 30px;
   ${media.desktop`
-    max-width: 250px;
+    max-width: 230px;
     margin-right: 40px;
-    min-width: 250px;
+    min-width: 230px;
   `}
 `;
 

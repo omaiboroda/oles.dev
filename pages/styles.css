@@ -13,3 +13,21 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+img {
+  max-width: 100% !important;
+  height: auto;
+  width: auto;
+}
+
+a {
+  color: #444444;
+}
+
+a:active {
+  color: #9E9E9E;
+}
+
+a:visited {
+  color: #616161;
+}
