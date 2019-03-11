@@ -1,5 +1,8 @@
 {
-  "name": "maiboroda.me",
+  "name": "oles.dev",
+  "alias": [
+    "oles.dev"
+  ],
   "version": 2,
   "builds": [
     {
