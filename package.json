@@ -1,5 +1,5 @@
 {
-  "name": "maiboroda.me",
+  "name": "oles.dev",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "lint": "eslint ./**/*.tsx --fix",
     "build": "next build",
     "export": "next export",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "author": "",
   "license": "ISC",

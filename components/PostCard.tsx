@@ -35,7 +35,7 @@ const UnstyledLink = styled.a`
 `;
 
 const PostLink = ({ post, children, ...props }) => (
-  <Link as={`/post/${post.slug}`} {...props}>
+  <Link as={`/posts/${post.slug}`} href={`/posts?slug=${post.slug}`} {...props}>
     {children}
   </Link>
 );
