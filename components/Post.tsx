@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Head from 'next/head';
 import { H1 } from './Typography';
 import { Box } from './system';
 
@@ -9,10 +10,19 @@ class Post extends Component {
     const Post = require(`../posts/${slug}/post.md`);
 
     return (
-      <Box pb={2}>
-        <H1 textAlign="center">{metadata.default.title}</H1>
-        <Post.default />
-      </Box>
+      <>
+        <Head>
+          <title>
+{metadata.default.title}
+{' '}
+- Oles Maiboroda
+</title>
+        </Head>
+        <Box pb={2}>
+          <H1 textAlign="center">{metadata.default.title}</H1>
+          <Post.default />
+        </Box>
+      </>
     );
   }
 }

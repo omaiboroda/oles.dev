@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Title from '../components/Title';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
@@ -10,16 +11,21 @@ import './styles.css';
 
 class Index extends React.Component {
   render = () => (
-    <Layout>
-      <Container>
-        <Header />
-        <Title />
-        <Flex flexDirection={['column', 'column', 'column', 'row']}>
-          <Profile />
-          <PostList />
-        </Flex>
-      </Container>
-    </Layout>
+    <>
+      <Head>
+        <title>Oles Maiboroda - Opinionated Frontend</title>
+      </Head>
+      <Layout>
+        <Container>
+          <Header />
+          <Title />
+          <Flex flexDirection={['column', 'column', 'column', 'row']}>
+            <Profile />
+            <PostList />
+          </Flex>
+        </Container>
+      </Layout>
+    </>
   );
 }
 
