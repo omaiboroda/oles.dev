@@ -41,6 +41,17 @@ class Layout extends Component {
             name="google-site-verification"
             content="2XU6kHQPBdzNI3_oRD7yx4-4jWGeyrLc1h73EPEi3xM"
           />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136600090-1" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());           
+            gtag('config', 'UA-136600090-1');
+          `
+            }}
+          />
         </Head>
         <ThemeProvider theme={theme}>
           <Background>{this.props.children}</Background>
