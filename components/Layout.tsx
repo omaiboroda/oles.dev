@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import Background from './Background';
@@ -29,36 +29,29 @@ const theme = {
   }
 };
 
-class Layout extends Component {
-  render() {
-    return (
-      <>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta charSet="utf-8" />
-          <link href="https://fonts.googleapis.com/css?family=Merriweather:400" rel="stylesheet" />
-          <meta
-            name="google-site-verification"
-            content="2XU6kHQPBdzNI3_oRD7yx4-4jWGeyrLc1h73EPEi3xM"
-          />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136600090-1" />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+const Layout = () => (
+  <>
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="utf-8" />
+      <link href="https://fonts.googleapis.com/css?family=Merriweather:400" rel="stylesheet" />
+      <meta name="google-site-verification" content="2XU6kHQPBdzNI3_oRD7yx4-4jWGeyrLc1h73EPEi3xM" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136600090-1" />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());           
             gtag('config', 'UA-136600090-1');
           `
-            }}
-          />
-        </Head>
-        <ThemeProvider theme={theme}>
-          <Background>{this.props.children}</Background>
-        </ThemeProvider>
-      </>
-    );
-  }
-}
+        }}
+      />
+    </Head>
+    <ThemeProvider theme={theme}>
+      <Background>{this.props.children}</Background>
+    </ThemeProvider>
+  </>
+);
 
 export default Layout;

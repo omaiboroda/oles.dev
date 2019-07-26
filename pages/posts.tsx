@@ -5,7 +5,11 @@ import Container from '../components/Container';
 import Post from '../components/Post';
 import Layout from '../components/Layout';
 
-class Posts extends React.Component {
+interface PostsInterface {
+  slug: string;
+}
+
+class Posts extends React.Component<PostsInterface> {
   static async getInitialProps({ query }) {
     return { slug: query.slug };
   }

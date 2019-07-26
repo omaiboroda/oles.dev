@@ -10,13 +10,11 @@ const StyledTitle = styled.div`
   `}
 `;
 
-const Title = () => {
-  return (
-    <StyledTitle>
-      <H1>Opinionated frontend</H1>
-      <H3>UX/DX</H3>
-    </StyledTitle>
-  );
-};
+const Title = () => (
+  <StyledTitle>
+    <H1>Opinionated frontend</H1>
+    <H3>UX/DX</H3>
+  </StyledTitle>
+);
 
 export default Title;

@@ -59,47 +59,45 @@ const Links = styled.ul`
   }
 `;
 
-const Profile = () => {
-  return (
-    <ProfileContainer theme="party" className="ProfileContainer">
-      <Flex justifyContent="space-betcween" flexDirection={['row', 'row', 'column']}>
-        <div>
-          <Avatar src="/static/avatar.jpeg" />
-        </div>
-        <Info>
-          <li>
-            <GoPerson />
-            &nbsp;
-            <span>Oles Maiboroda</span>
-          </li>
-          <li>
-            <GoLocation />
-            &nbsp;
-            <span>Berlin, Germany</span>
-          </li>
-        </Info>
-      </Flex>
-      <p>
-        Hi, I’m Oles Maiboroda. I do Frontend for a living and have interest in Engineering, UI/UX
-        and Product development
-      </p>
-      <Links>
+const Profile = () => (
+  <ProfileContainer theme="party" className="ProfileContainer">
+    <Flex justifyContent="space-betcween" flexDirection={['row', 'row', 'column']}>
+      <div>
+        <Avatar src="/static/avatar.jpeg" />
+      </div>
+      <Info>
         <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://dev.to/omaiboroda">
-            dev.to
-          </a>
+          <GoPerson />
+          &nbsp;
+          <span>Oles Maiboroda</span>
         </li>
         <li>
-          <a rel="noopener noreferrer" target="_blank" href="http://github.com/omaiboroda">
-            github
-          </a>
+          <GoLocation />
+          &nbsp;
+          <span>Berlin, Germany</span>
         </li>
-        <li>
-          <a href="#">Resume</a>
-        </li>
-      </Links>
-    </ProfileContainer>
-  );
-};
+      </Info>
+    </Flex>
+    <p>
+      Hi, I’m Oles Maiboroda. I do Frontend for a living and have interest in Engineering, UI/UX and
+      Product development
+    </p>
+    <Links>
+      <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://dev.to/omaiboroda">
+          dev.to
+        </a>
+      </li>
+      <li>
+        <a rel="noopener noreferrer" target="_blank" href="http://github.com/omaiboroda">
+          github
+        </a>
+      </li>
+      <li>
+        <a href="#">Resume</a>
+      </li>
+    </Links>
+  </ProfileContainer>
+);
 
 export default Profile;

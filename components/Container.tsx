@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import media from '../helpers/media';
 import { Box } from './system';
@@ -14,7 +15,11 @@ const ContainerStyled = styled.div`
   `}
 `;
 
-const Container = ({ children }) => (
+interface Props {
+  children: React.ElementType;
+}
+
+const Container: React.FunctionComponent<Props> = ({ children }: Props) => (
   <div>
     <ContainerStyled>{children}</ContainerStyled>
     <Box height={50} />

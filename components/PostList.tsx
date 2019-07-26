@@ -7,14 +7,12 @@ postList.forEach(p => {
   posts.push(require(`../posts/${p}/metadata.js`).default);
 });
 
-const PostsList = () => {
-  return (
-    <div>
-      {posts.map(p => (
-        <PostCard post={p} />
-      ))}
-    </div>
-  );
-};
+const PostsList = () => (
+  <div>
+    {posts.map(p => (
+      <PostCard key={p.slug} post={p} />
+    ))}
+  </div>
+);
 
 export default PostsList;
