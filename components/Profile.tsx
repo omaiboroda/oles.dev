@@ -94,7 +94,22 @@ const Profile = () => (
         </a>
       </li>
       <li>
-        <a href="#">Resume</a>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.linkedin.com/in/oles-maiboroda-b3670589/"
+        >
+          linkedin
+        </a>
+      </li>
+      <li>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.figma.com/file/aMqvrnBrYfV7remHNem6xpih/oles.dev"
+        >
+          design
+        </a>
       </li>
     </Links>
   </ProfileContainer>

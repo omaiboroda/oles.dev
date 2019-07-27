@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Container from '../components/Container';
 import Post from '../components/Post';
 import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 
 interface PostsInterface {
   slug: string;
@@ -19,6 +20,7 @@ class Posts extends React.Component<PostsInterface> {
       <Container narrow>
         <Header />
         <Post slug={this.props.slug} />
+        <Footer />
       </Container>
     </Layout>
   );

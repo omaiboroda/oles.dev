@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Profile from '../components/Profile';
 import Container from '../components/Container';
 import PostList from '../components/PostList';
+import Footer from '../components/Footer';
 import { Flex } from '../components/system';
 import './styles.css';
 
@@ -23,6 +24,7 @@ class Index extends React.Component {
             <Profile />
             <PostList />
           </Flex>
+          <Footer />
         </Container>
       </Layout>
     </>
