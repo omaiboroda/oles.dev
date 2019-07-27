@@ -1,8 +1,19 @@
 const withTypescript = require('@zeit/next-typescript');
 const withCSS = require('@zeit/next-css');
-const withMDX = require('@zeit/next-mdx')({
-  extension: /.mdx?$/
-});
 const withImages = require('next-images');
 
-module.exports = withImages(withMDX(withCSS(withTypescript({ target: 'serverless' }))));
+module.exports = withImages(
+  withCSS(
+    withTypescript({
+      target: 'serverless',
+      webpack: config => {
+        config.module.rules.push({
+          test: /\.md$/,
+          use: 'raw-loader'
+        });
+
+        return config;
+      }
+    })
+  )
+);

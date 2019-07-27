@@ -16,7 +16,7 @@ class Posts extends React.Component<PostsInterface> {
 
   render = () => (
     <Layout>
-      <Container>
+      <Container narrow>
         <Header />
         <Post slug={this.props.slug} />
       </Container>

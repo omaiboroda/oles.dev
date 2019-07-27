@@ -19,15 +19,15 @@ It is pretty easy to create translation keys, but hard to do it in a way that it
 There are already good i18n guidelines written by [Phraseapp](https://phraseapp.com/blog/posts/ruby-lessons-learned-naming-and-managing-rails-i18n-keys/) and [MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_content_best_practices), but they do not answer how should we name the translation keys themselves.
 
 To abstract from implementation, we'll agree on translation function `t`, which takes a translation key and returns message:
-
+```js
     t('things') // => "How things work"
-
+```
 ### Option 1  - Interesting
 
 You might have only custom defined keys, without defaults. For instance:
-
+```js
     t('landing_page.how_things_work') // => "How things work"
-
+```
 As for the initial translation, there will be a need to add initial messages to a translation file.
 
 **Pros**
@@ -44,12 +44,12 @@ As for the initial translation, there will be a need to add initial messages to 
 ### Option 2  -  Bulletproof
 
 You can specify both - translation key and default message:
-
-    t({
-      key: 'landing_page.how_things_work', 
-      defaultMessage: "Things explained"
-    }) // => "How things work"
-
+```js
+t({
+    key: 'landing_page.how_things_work', 
+    defaultMessage: "Things explained"
+}) // => "How things work"
+```
 **Pros**
 * Flexible - you can change your default message without being afraid it will cause issues;
 * You have a connection between sources and actual visual representation.
@@ -61,9 +61,9 @@ You can specify both - translation key and default message:
 ### Option 3 - Straightforward.
 
 You can use the same text as your message in English:
-
-    t('How things work') // => "How things work"
-
+```js
+t('How things work') // => "How things work"
+```
 This way we're eliminating the necessity to maintain default messages and create keys for them.
 
 **Pros**

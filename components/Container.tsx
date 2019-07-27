@@ -4,7 +4,7 @@ import media from '../helpers/media';
 import { Box } from './system';
 
 const ContainerStyled = styled.div`
-  max-width: 960px;
+  max-width: ${p => (p.narrow ? '768px' : '960px')};
   width: 100%;
   margin: 0 auto;
   padding: 20px;
@@ -17,11 +17,12 @@ const ContainerStyled = styled.div`
 
 interface Props {
   children: React.ElementType;
+  narrow?: boolean;
 }
 
-const Container: React.FunctionComponent<Props> = ({ children }: Props) => (
+const Container: React.FunctionComponent<Props> = ({ children, narrow }: Props) => (
   <div>
-    <ContainerStyled>{children}</ContainerStyled>
+    <ContainerStyled narrow={narrow}>{children}</ContainerStyled>
     <Box height={50} />
   </div>
 );

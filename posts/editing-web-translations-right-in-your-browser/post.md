@@ -19,30 +19,30 @@ All you need to is
 2. Format messages into the proper format.
 
 If you're in the Javascript world, I have wrote a [lingui-phraseapp](https://www.npmjs.com/package/lingui-phraseapp), which helps you to do these two steps, so your integration may look alike
+```js
+import { initializePhraseAppEditor, initializePhraseAppEditor } from "lingui-phraseapp";
+import catalog from './locales/de/messages.js';
 
-    import { initializePhraseAppEditor, initializePhraseAppEditor } from "lingui-phraseapp";
-    import catalog from './locales/de/messages.js';
+const configInContextEditor = {
+  projectId: REACT_APP_PHRASEAPP_PROJECT_ID,
+  autoLowercase: false,
+  prefix: "--__",
+  suffix: "__--",
+  phraseEnabled: !!localStorage.getItem("inContextEditor");
+};
 
-    const configInContextEditor = {
-      projectId: REACT_APP_PHRASEAPP_PROJECT_ID,
-      autoLowercase: false,
-      prefix: "--__",
-      suffix: "__--",
-      phraseEnabled: !!localStorage.getItem("inContextEditor");
-    };
+...
+<!-- Add snippet -->
+initializePhraseAppEditor(configInContextEditor);
 
-    ...
-    <!-- Add snippet -->
-    initializePhraseAppEditor(configInContextEditor);
+<!-- Format messages -->
+const catalogFormatted = configInContextEditor.phraseEnabled
+  ? transformCatalog(catalog, configInContextEditor)
+  : catalog;
 
-    <!-- Format messages -->
-    const catalogFormatted = configInContextEditor.phraseEnabled
-      ? transformCatalog(catalog, configInContextEditor)
-      : catalog;
-
-    const i18n = setupI18n({ catalogs: { de: catalogFormatted });
-    ...
-
+const i18n = setupI18n({ catalogs: { de: catalogFormatted });
+...
+```
 As you can see from above to enable Editor set `inContextEditor: true` in the LocalStorage. After that, the modal for username and password will appear.
 
 There are also implementations for other popular translation libraries [react-intl-phraseapp](https://github.com/phrase/react-intl-phraseapp), [react-i18next-phraseapp](https://github.com/phrase/react-i18next-phraseapp), although integration itself is pretty straightforward and simple.
