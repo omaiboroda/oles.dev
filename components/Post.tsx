@@ -3,8 +3,7 @@ import Head from 'next/head';
 import { H1 } from './Typography';
 import { Box } from './system';
 
-const Post = () => {
-  const { slug } = this.props;
+const Post = ({ slug }: { slug: string }) => {
   const metadata = require(`../posts/${slug}/metadata.js`);
   const Post = require(`../posts/${slug}/post.md`);
 

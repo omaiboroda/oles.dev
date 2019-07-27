@@ -29,7 +29,7 @@ const theme = {
   }
 };
 
-const Layout = () => (
+const Layout = ({ children }: { children: React.ReactChildren }) => (
   <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,7 +49,7 @@ const Layout = () => (
       />
     </Head>
     <ThemeProvider theme={theme}>
-      <Background>{this.props.children}</Background>
+      <Background>{children}</Background>
     </ThemeProvider>
   </>
 );
