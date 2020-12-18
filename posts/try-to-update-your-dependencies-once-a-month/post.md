@@ -29,7 +29,7 @@ Once enabled, Dependabot will start to open PRs for new versions.
 Dependabot will open PRs with the following contents
 
 ![Imgur](https://i.imgur.com/lG2FlCd.png)
-<figcaption>dependabot's Pull requests descripts</figcaption>
+<figcaption>dependabot's Pull request description</figcaption>
 
 ### Batch update, once a month
 
@@ -45,7 +45,7 @@ It is possible to ask Renovatebot to open batch PR once a month
 
 With the following configuration, Renovate will open monthly PR with the following contents
 ![Imgur](https://i.imgur.com/9vTRp2m.png)
-<figcaption>renovate's Pull requests descripts</figcaption>
+<figcaption>renovate's Pull request description</figcaption>
 
 Here's renovate.json configuration we settled:
 

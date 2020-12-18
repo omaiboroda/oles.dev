@@ -1,4 +1,5 @@
 const posts = [
+  'shorten-your-feedback-loop',
   'try-to-update-your-dependencies-once-a-month',
   'frontend-360',
   'why-i-love-frontend-two-triangles',
