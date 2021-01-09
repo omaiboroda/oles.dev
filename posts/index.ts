@@ -1,4 +1,5 @@
 const posts = [
+  'common-pitfalls-when-dealing-with-web-performance',
   'shorten-your-feedback-loop',
   'try-to-update-your-dependencies-once-a-month',
   'frontend-360',
