@@ -3,7 +3,7 @@ import { Flex } from '../components/system';
 
 const Footer = () => (
   <Flex p={3} w={1} justifyContent="center">
-    © 2019 &nbsp;&nbsp;• &nbsp;&nbsp;
+    © 2021 &nbsp;&nbsp;• &nbsp;&nbsp;
     <a href="mailto:oles.maiboroda@gmail.com">oles.maiboroda@gmail.com</a>
   </Flex>
 );

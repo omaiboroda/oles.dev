@@ -106,9 +106,9 @@ const Profile = () => (
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="https://www.figma.com/file/aMqvrnBrYfV7remHNem6xpih/oles.dev"
+          href="https://play.google.com/store/apps/developer?id=Oles+Maiboroda"
         >
-          design
+          play store
         </a>
       </li>
     </Links>
